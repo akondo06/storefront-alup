@@ -9,3 +9,6 @@
       - select the file "dummy-data.xml" from \wp-content\plugins\woocommerce\dummy-data\
       - download the attachments too!
   - Install [storefront](https://www.woothemes.com/storefront/) theme.
+
+## Documentation
+- [Woocommerce and Storefront](https://docs.woothemes.com/)
