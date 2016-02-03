@@ -8,9 +8,9 @@
       - go to Tools -> import and select "wordpress" (install it if necessary)
       - select the file "dummy-data.xml" from \wp-content\plugins\woocommerce\dummy-data\
       - download the attachments too!
-  - [storefront](https://www.woothemes.com/storefront/) theme.
+  - [Storefront](https://www.woothemes.com/storefront/) theme.
 
-## Setup (this repo) Child Theme
+## Setup Child Theme (this repo)
 - clone in \wp-content\themes\ folder
 - activate it from administration!
  
