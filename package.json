@@ -1,0 +1,10 @@
+{
+  "name": "storefront-alup",
+  "version": "0.1.0",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.2.0"
+  }
+}
