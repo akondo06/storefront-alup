@@ -11,7 +11,7 @@ gulp.task('sass', function() {
 
 gulp.task('browserSync', function() {
 	browserSync.init({
-		port: 80,
+		port: 8888,
 		startPath: '/wordpress/'
 	});
 });

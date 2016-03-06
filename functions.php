@@ -31,10 +31,17 @@ function is_hocalhost() {
 
 if(is_hocalhost()) {
 	add_action('storefront_after_footer', 'add_browsersync');
+
 	function add_browsersync() {
-		echo "<script type='text/javascript' id=\"__bs_script__\">//<![CDATA[
-				document.write(\"<script async src='http://HOST:81/browser-sync/browser-sync-client.2.11.1.js'><\/script>\".replace
-			(\"HOST\", location.hostname));
-			//]]></script>";
+		?> 
+		<script type='text/javascript' id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:8890/browser-sync/browser-sync-client.2.11.1.js'><\/script>".replace("HOST", location.hostname));
+//]]></script>
+<?php
 	}
+}
+
+add_action('woocommerce_after_single_product', 'add_fb_share');
+function add_fb_share() {
+	echo "ALup";
 }
