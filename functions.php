@@ -23,11 +23,15 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
+
+
+/**
+ * Add Browsersync for development
+ */
 function is_hocalhost() {
 	$whitelist = array('127.0.0.1', '::1');
 	return in_array($_SERVER['REMOTE_ADDR'], $whitelist);
 }
-
 
 if(is_hocalhost()) {
 	add_action('storefront_after_footer', 'add_browsersync');
@@ -40,8 +44,23 @@ if(is_hocalhost()) {
 <?php
 	}
 }
-
+/*
 add_action('woocommerce_after_single_product', 'add_fb_share');
 function add_fb_share() {
 	echo "ALup";
+}*/
+
+/* HEADER STUFF .. should me moved to a single file */
+function storefront_site_branding() {
+	?>
+	<div class="site-logo">
+		<a href="<?php echo esc_url(home_url( '/' )); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri().'/img/logo.png'; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+	</div>
+	<?php 
 }
+function storefront_skip_links() { }
+function storefront_product_search() { }
+function storefront_header_cart() { }
+function storefront_secondary_navigation() { }
+
+

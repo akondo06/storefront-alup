@@ -1,3 +1,19 @@
-.site-header { background-color: gray;
-	
+.woocommerce-active .site-header { background-color: $white; padding-top: 10px;
+	.site-logo { text-align: center;
+		a { display: inline-block; 
+			img { /* background-color: red; */ }
+		}
+	}
+
+	.main-navigation {
+		@media (min-width: $screen-sm-min) { float: none; width: 100%; padding: 0; margin: 0; text-align: center;
+			ul.menu, ul.nav-menu {
+				> li {
+					> a { padding: 10px; color: $black;
+						&:hover { color: $white; }
+					}
+				}
+			}
+		}
+	}
 }
