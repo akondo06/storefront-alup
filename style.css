@@ -8,6 +8,7 @@
 	Text Domain:  	storefront
 	Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout
 */
+@import url(./../storefront/style.css);
 .clearfix {
   clear: both; }
   .clearfix:after {

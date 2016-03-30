@@ -8,6 +8,9 @@
 	Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout
 */
 
+@import './../storefront/style.css';
+
+
 .clearfix { clear: both;
 	&:after { content: ''; display: table; clear: both; }
 }
@@ -23,6 +26,9 @@ $screen-md-max: ($screen-lg-min - 1);
 
 $white: #fff;
 $black: #000;
+
+
+
 
 @import './scss/helpers/mixins.scss';
 @import './scss/base/header.scss';
