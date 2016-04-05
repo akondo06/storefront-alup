@@ -1,10 +1,26 @@
 {
-  "name": "storefront-alup",
-  "version": "0.1.0",
+  "name":     "storefront-alup",
+  "title":    "Storefront-alup",
+  "version":  "1.0.0",
+  "license": "GPL-2.0+",
+  "main": "Gruntfile.js",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-sass": "^2.2.0"
+    "grunt":                  "~0.4.5",
+    "grunt-checktextdomain":  "^1.0.0",
+    "grunt-contrib-cssmin":   "~0.14.0",
+    "grunt-contrib-jshint":   "^0.11.2",
+    "grunt-contrib-uglify":   "~0.9.1",
+    "grunt-contrib-watch":    "~0.6.1",
+    "grunt-wp-i18n":          "^0.5.2",
+    "grunt-rtlcss":           "~1.6.0",
+    "grunt-sass":             "^1.0.0",
+    "node-sass":              "^3.2.0",
+    "susy":                   "^2.2.5",
+    "node-bourbon":           "~4.2.3",
+    "grunt-contrib-copy":     "~0.8.0"
+  },
+  "engines": {
+    "node":                   ">=0.8.0",
+    "npm":                    ">=1.1.0"
   }
 }

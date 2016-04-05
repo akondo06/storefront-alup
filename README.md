@@ -8,19 +8,13 @@
       - go to Tools -> import and select "wordpress" (install it if necessary)
       - select the file "dummy-data.xml" from \wp-content\plugins\woocommerce\dummy-data\
       - download the attachments too!
-  - [Storefront](https://www.woothemes.com/storefront/) theme.
 
-## Setup Child Theme (this repo)
-- clone in \wp-content\themes\ folder
-- activate it from administration!
-
-## Setup GulpJS
+## Setup GruntJS
 - Install node and npm (google it!)
-- Install gulp-cli globally (npm install --global gulp-cli)
+- Install grunt-cli globally (npm install --global grunt-cli)
 - Install the dependencies by running "npm install"
-- Run the "gulp watch" command and that's it!
+- Run the "grunt watch" command and that's it!
  
 ## Documentation
-- [Woocommerce and Storefront](https://docs.woothemes.com/)
-- [Wordpress Child Themes](https://codex.wordpress.org/Child_Themes)
-- [GulpJS docs](https://github.com/gulpjs/gulp/tree/master/docs)
+- [Woocommerce and Storefront (original)](https://docs.woothemes.com/)
+- [GruntJS docs](http://gruntjs.com/getting-started)
