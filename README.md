@@ -2,6 +2,10 @@
 
 ## Setup Dependencies
 - [Wordpress](www.wordpress.org) 4.4.2 or higher 
+  - Setup sizes:
+  	- go to wp-admin and under "settings" there's a "Media" page
+  	- Change stuff to:
+  		- Medium size: max width to 500 and max height to 670
   - [Woocommerce](www.woothemes.com/woocommerce/) 2.5.2 or higher
     - Dummy data ([Source](https://docs.woothemes.com/document/importing-woocommerce-dummy-data/)):
       - login to wp-admin
