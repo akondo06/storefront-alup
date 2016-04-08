@@ -302,56 +302,32 @@ ul.products {
 	li.product {
 		list-style: none;
 		margin-left: 0;
-		margin-bottom: 4.236em;
+		margin-bottom: 5.236em;
 		text-align: center;
 		position: relative;
 
-		.star-rating,
-		.price {
-			margin: 0 auto 1em;
+		.star-rating, .price { margin: 0 auto 1em; }
+
+		.woocommerce-LoopProduct-link { display: block; }
+
+		.onsale, .add_to_cart_button, .star-rating { display: none; }
+
+		.star-rating { font-size: .857em; }
+		img { display: block; width: 100%; height: auto; }
+		h3 { margin-top: 30px; font-size: 14px; font-weight: 700; letter-spacing: 0.075em; line-height: 18px; text-transform: uppercase; }
+
+		.price { position: relative; display: block; color: $color_body; font-weight: 300;
+			ins { background-color: transparent; margin-left: .618em; font-weight: 700; }
+			.price-inner { position: relative; background: $body-background; padding: 0 15px; }
+			&:before { content: ''; display: block; position: absolute; top: 50%; left: 10%; right: 10%; border-top: 1px solid #b0b0b1; width: 80%; }
 		}
 
-		.woocommerce-LoopProduct-link {
-			display: block;
-		}
 
-		.price {
-			display: block;
-			color: $color_body;
-			font-weight: 400;
-
-			ins {
-				font-weight: 700;
-				margin-left: .618em;
-				background-color: transparent;
-			}
-		}
-
-		h3 {
-			font-size: 1.1em;
-		}
-
-		.star-rating {
-			font-size: .857em;
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-			// margin: 0 auto 1.618em;
-			// border-radius: 2px;
-		}
 
 		&.product-category {
-			img {
-				margin-bottom: 1.618em;
-			}
+			img { margin-bottom: 1.618em; }
 		}
-
-		.button {
-			margin-bottom: .236em;
-		}
+		.button { margin-bottom: .236em; }
 	}
 }
 
@@ -1810,7 +1786,7 @@ dl.variation {
 			float: left;
 			font-size: .857em;
 
-			min-height: 700px;
+			// min-height: 700px;
 
 			&.first {
 				clear: both !important;
@@ -1946,8 +1922,8 @@ dl.variation {
 		ul.products {
 			li.product {
 				// @include span(3 of 9);
-				width: 48%;
-				margin-right: 4%;
+				width: 49%;
+				margin-right: 2%;
 			}
 		}
 	}
