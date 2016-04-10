@@ -126,7 +126,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since  1.0.0
 		 */
 		public function thumbnail_columns() {
-			return intval( apply_filters( 'storefront_product_thumbnail_columns', 4 ) );
+			return intval( apply_filters( 'storefront_product_thumbnail_columns', 1 ) );
 		}
 
 		/**

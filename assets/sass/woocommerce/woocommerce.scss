@@ -354,29 +354,42 @@ ul.products {
 		.summary {
 			margin-bottom: 2.618em;
 			margin-top: 0;
+
+			h1 { text-transform: uppercase; text-align: center; }
+
+			.price.nice { position: relative; display: block; color: $color_body; font-weight: 300; text-align: center;
+				.price-inner { position: relative; background: $body-background; padding: 0 15px; }
+				&:before { content: ''; display: block; position: absolute; top: 50%; left: 10%; right: 10%; border-top: 1px solid #b0b0b1; width: 80%; }
+			}
+
+			.short-desc { padding: 0 10%; text-align: center;
+				p { margin: 0 0 22px; font-weight: 400; font-size: 14px; line-height: 22px; font-style: italic; letter-spacing: 0.10em; }
+			}
 		}
 
 		.images {
 			.woocommerce-main-image {
-				margin-bottom: 1.618em;
+				// margin-bottom: 1.618em;
 				display: block;
+				img { width: 100%; }
 			}
 
 			.thumbnails {
 				a.zoom {
 					display: block;
-					width: 22.05%;
-					margin-right: 3.8%;
-					float: left;
-					margin-bottom: 1em;
+					// width: 22.05%;
+					// margin-right: 3.8%;
+					// float: left;
+					// margin-bottom: 1em;
 
-					&.last {
-						margin-right: 0;
-					}
+					// &.last {
+					// 	margin-right: 0;
+					// }
 
-					&.first {
-						clear: both;
-					}
+					// &.first {
+					// 	clear: both;
+					// }
+					img { width: 100%; }
 				}
 			}
 		}
@@ -1934,24 +1947,24 @@ dl.variation {
 	.single-product {
 		div.product {
 			.images {
-				@include span(4 of 9);
+				@include span(8 of 12);
 				margin-bottom: 3.631em;
 
 				.thumbnails {
 					@include clearfix;
 
 					a.zoom {
-						@include span(1 of 4);
+						// @include span(1 of 4);
 
-						&.last {
-							@include last;
-						}
+						// &.last {
+						// 	@include last;
+						// }
 					}
 				}
 			}
 
 			.summary {
-				@include span(last 5 of 9);
+				@include span(last 4 of 12);
 				margin-bottom: 3.631em;
 			}
 
@@ -1974,24 +1987,28 @@ dl.variation {
 
 	// Full width single product
 	.storefront-full-width-content.single-product {
+		.site-content {
+			> .col-full { width: 100%; max-width: 100%; padding: 0; margin: 0; }
+		}
 		div.product {
 			.images {
-				@include span(4 of 12);
+				@include span(8 of 12);
 				margin-bottom: 3.631em;
 
 				.thumbnails {
 					a.zoom {
-						@include span(1 of 4);
+						// @include span(1 of 4);
 
-						&.last {
-							margin-right: 0;
-						}
+						// &.last {
+						// 	margin-right: 0;
+						// }
 					}
 				}
 			}
 
 			.summary {
-				@include span(last 8 of 12);
+				@include span(last 4 of 12);
+				padding-right: 1.6949152542%;
 				margin-bottom: 3.631em;
 			}
 

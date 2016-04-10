@@ -8,7 +8,7 @@ $header-font: 		$base-font;
 
 // base color scheme
 $body-background: 	#fff; // #f5f5f5
-$color_body: 		#60646c;
+$color_body: 		#505252;
 $color_links: 		#4a4a4a;
 $color_border:		rgba(0,0,0,0.1);
 $error: 			#e2401c;
@@ -23,7 +23,7 @@ $container-width:	67.141em;
 
 $susy: (
 	columns: 12,
-	gutters: 1,
+	gutters: 1/8,
 	math: fluid,
 	output: float,
 	gutter-position: after,

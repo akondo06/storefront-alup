@@ -33,9 +33,10 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 900;
+	font-weight: 700;
 	margin: 0 0 .53em;
-	color: darken( $color_body, 20% );
+	// color: darken( $color_body, 20% );
+	color: $color_body;
 
 	a {
 		font-weight: 900;
@@ -44,15 +45,15 @@ h6 {
 
 h1,
 .alpha {
-	font-size: 2.618em;
-	line-height: 1.214;
-	letter-spacing: -1px;
+	font-size: 25px;
+    line-height: 32px;
+	letter-spacing: 0.10em;
 }
 
 h2,
 .beta {
 	font-size: 2.244em;
-	letter-spacing: -1px;
+	letter-spacing: 0.10em;
 	line-height: 1.214;
 }
 
