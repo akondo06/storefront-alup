@@ -13,14 +13,16 @@ button.menu-toggle {
 	cursor: pointer;
 	text-align: left;
 	float: right;
-	position: relative;
+	position: absolute;
+	top: 0;
+	right: 0;
 	border: 2px solid transparent;
 	box-shadow: none;
 	border-radius: 2px;
 	background-image: none;
 	padding: .618em .857em .618em 2.618em;
 	font-size: .857em;
-
+	
 	&:hover {
 		background-image: none;
 	}
@@ -41,6 +43,7 @@ button.menu-toggle {
 		left: 1em;
 		margin-top: -1px;
 		@include transition(all,ease,.2s);
+		background-color: #fff;
 	}
 
 	&:before {
@@ -50,6 +53,7 @@ button.menu-toggle {
 	&:after {
 		@include transform(translateY(4px));
 	}
+	&:focus { outline: none; }
 }
 
 .toggled {
@@ -116,20 +120,9 @@ button.menu-toggle {
 	}
 
 	li {
-		a {
-			padding: .857em 0;
-			display: block;
-
-			&:before {
-				font-family: "FontAwesome";
-				content: "\f0f6";
-				margin-right: .53em;
-				font-weight: 400;
-			}
-
-			&:hover {
-				color: #e6e6e6;
-			}
+		a { display: block; padding: .857em 0; font-size: 12px; font-weight: 400; letter-spacing: 0.13em;
+			&:before { font-family: "FontAwesome"; content: "\f0f6"; margin-right: .53em; font-weight: 400; }
+			&:hover { color: #e6e6e6; }
 		}
 	}
 }
@@ -175,22 +168,11 @@ button.menu-toggle {
 				// link hover
 				&:hover,
 				&.focus {
-					> ul {
-						left: 0;
-						display: block;
-
+					> ul { left: 0; display: block;
 						li {
-							> ul {
-								display: none; // display: none; is required to make dropdowns work on touch devices
-							}
-
-							&:hover,
-							&.focus {
-								> ul {
-									left: 100%;
-									top: 0;
-									display: block;
-								}
+							> ul { display: none; } // display: none; is required to make dropdowns work on touch devices
+							&:hover, &.focus {
+								> ul { left: 100%; top: 0; display: block; }
 							}
 						}
 					}
@@ -199,29 +181,19 @@ button.menu-toggle {
 			}
 
 			// second level
-			ul {
-				float: left;
-				position: absolute;
-				top: 100%;
-				z-index: 99999;
-				display: none; // display: none; is required to make dropdowns work on touch devices
-
+			ul { float: left; position: absolute; top: 100%; z-index: 99999; display: none; 
+				// display: none; is required to make dropdowns work on touch devices
 				li {
-					a {
-						width: 200px;
-					}
+					a { width: 200px; }
 				}
 			}
 		}
-
 	}
 
 	ul.menu {
 		li {
 			&.current-menu-item {
-				> a {
-					color: $color_body;
-				}
+				> a { color: $color_body; }
 			}
 		}
 	}
@@ -229,162 +201,75 @@ button.menu-toggle {
 	/**
 	 * Primary Navigation
 	 */
-	.storefront-primary-navigation {
-		clear: both;
-		@include clearfix;
-		background: rgba(#000,.06);
-		margin-left: -999em;
-		margin-right: -999em;
-		padding-left: 999em;
-		padding-right: 999em;
-	}
+	.storefront-primary-navigation { clear: both; @include clearfix;/* background: rgba(#000,.06); */ margin-left: -999em; margin-right: -999em; padding-left: 999em; padding-right: 999em; }
 
 	.main-navigation {
 		ul.menu,
-		ul.nav-menu {
-			max-height: none;
-			overflow: visible;
-
+		ul.nav-menu {max-height: none; overflow: visible;
 			> li {
 				// The first level menu item
-				> a {
-					padding: 2.244em 1em;
-				}
+				> a { padding: 15px 20px; color: #000; text-transform: uppercase; }
 
-				&:first-child {
-					margin-left: -1em;
-				}
+				&:first-child {margin-left: -1em; }
 
-				&.menu-item-has-children,
-				&.page_item_has_children {
+				&.menu-item-has-children, &.page_item_has_children {
 					&:hover {
-						&:after {
-							display: block;
-						}
+						&:after { display: block; }
 					}
 
-					> a {
-						&:after {
-							// The dropdown indicator
-							content: "\f107";
-							font-family: "FontAwesome";
-							margin-left: 1em;
-							line-height: 1;
-							font-weight: inherit;
-						}
+					> a { // The dropdown indicator
+						&:after { content: "\f107"; font-family: "FontAwesome"; margin-left: 0.3em; line-height: 1; font-weight: inherit; }
 					}
 				}
 			}
-
-			ul {
-				// Dropdowns
-				margin-left: 0;
-
+			
+			// Dropdowns
+			ul { margin-top: 1px; margin-left: 0; background-color: rgba(245, 245, 245, 0.7);
 				li {
-					a {
-						padding: .857em 1.387em;
-						font-weight: 400;
-						font-size: .857em;
-					}
+					a { padding: .857em 1.387em; }
 
-					&:last-child {
-						border-bottom: 0;
-					}
+					&:last-child { border-bottom: 0; }
 
-					&.menu-item-has-children,
-					&.page_item_has_children {
-						> a {
-							&:after {
-								// The dropdown indicator
-								content: "\f105";
-								font-family: "FontAwesome";
-								float: right;
-							}
+					&.menu-item-has-children, &.page_item_has_children {
+						> a { // The dropdown indicator
+							&:after { content: "\f105"; font-family: "FontAwesome"; float: right; }
 						}
 					}
 				}
 
-				ul {
-					margin-left: 0;
-					box-shadow: none;
-				}
+				ul { margin-left: 0; box-shadow: none; }
 
-				a:hover,
-				li:hover > a {
-					background-color: rgba(0,0,0,0.025);
-				}
+				a:hover, li:hover > a { background-color: rgba(0,0,0,0.025); color: #000; }
 			}
 		}
-
-		a {
-			padding: 0 1em 2.244em;
-		}
+		a { padding: 0 1em 2.244em; }
 	}
 
 	/**
 	 * Secondary Navigation
 	 */
-	.secondary-navigation {
-		margin: 0 0 1.618em;
-		width: auto;
-		clear: none;
-		line-height: 1;
+	.secondary-navigation { margin: 0 0 1.618em; width: auto; clear: none; line-height: 1;
+		.menu { font-size: .857em; width: auto; float: right;
+			> li:hover > a { text-decoration: none; }
 
-		.menu {
-			font-size: .857em;
-			width: auto;
-			float: right;
-
-			> li:hover > a {
-				text-decoration: none;
+			> li > a { position: relative;
+				&:before { content: ""; display: block; width: 1px; height: 25%; background-color: rgba(#000,0.05); position: absolute; top: 37.5%; left: -3px; }
 			}
 
-			> li > a {
-				position: relative;
-
-				&:before {
-					content: "";
-					display: block;
-					width: 1px;
-					height: 25%;
-					background-color: rgba(#000,0.05);
-					position: absolute;
-					top: 37.5%;
-					left: -3px;
-				}
-			}
-
-			> li:first-child a:before {
-				display: none;
-			}
+			> li:first-child a:before { display: none; }
 
 			ul {
-				a {
-					padding: .326em .857em;
-					background: rgba(#000,0.05);
-				}
+				a { padding: .326em .857em; background: rgba(#000,0.05); }
 
-				li:first-child a {
-					padding-top: 1em;
-				}
+				li:first-child a { padding-top: 1em; }
 
-				li:last-child a {
-					padding-bottom: 1em;
-				}
+				li:last-child a { padding-bottom: 1em; }
 
-				ul {
-					margin-top: -.618em;
-				}
+				ul { margin-top: -.618em; }
 			}
 
-			a {
-				padding: 1.387em .857em;
-				font-weight: 300;
-				color: lighten( $color_body, 20% );
-
-				&:hover {
-					text-decoration: none;
-				}
+			a { padding: 1.387em .857em; font-weight: 300; color: lighten( $color_body, 20% );
+				&:hover { text-decoration: none; }
 			}
 		}
 	}

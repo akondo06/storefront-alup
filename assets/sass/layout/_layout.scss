@@ -197,6 +197,7 @@
 }
 
 @include susy-media (max-width $container-width) {
+	.site-header { min-height: 90px; }
 	.col-full {
 		margin-left: 2.618em;
 		margin-right: 2.618em;
