@@ -68,7 +68,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		</div>
 	</div><!-- .summary -->
-
+	
+	<div class="col-full">
 	<?php
 		/**
 		 * woocommerce_after_single_product_summary hook.
@@ -78,9 +79,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_output_related_products - 20
 		 */
 		remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs');
+		remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display');
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
-
+	</div>
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->

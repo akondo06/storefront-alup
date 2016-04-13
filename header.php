@@ -58,7 +58,5 @@
 		 *
 		 * @hooked woocommerce_breadcrumb - 10
 		 */
-		if(is_product()) {
-			remove_action( 'storefront_content_top', 'woocommerce_breadcrumb');
-		}
+		remove_action( 'storefront_content_top', 'woocommerce_breadcrumb');
 		do_action( 'storefront_content_top' );

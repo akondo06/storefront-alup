@@ -862,16 +862,16 @@ table.cart {
 		}
 	}
 
-	tr:first-child {
-		td.product-remove {
-			border-top-width: 0;
-		}
-	}
+	// tr:first-child {
+	// 	td.product-remove {
+	// 		border-top-width: 0;
+	// 	}
+	// }
 
 	td.product-remove {
 		@include clearfix;
 		padding: 0;
-		border-top: 1.618em solid;
+		// border-top: 1px solid $color_border;
 		position: relative;
 
 		a.remove {
@@ -899,7 +899,7 @@ table.cart {
 	}
 
 	td.actions {
-		border-top: 1em solid;
+		border-top: 2px solid $color_border;
 		background-color: transparent;
 		padding: 0;
 
@@ -2099,9 +2099,13 @@ dl.variation {
 	}
 
 	table.cart {
+		tr {
+			> td { border-top: 1px solid $color_border; }
+		}
+
 		th,
 		td {
-			padding: 1.618em;
+			padding: 0.618em;
 		}
 
 		.qty {
@@ -2111,8 +2115,8 @@ dl.variation {
 
 		td.product-remove {
 			display: table-cell;
-			padding: 1.618em;
-			border: 0;
+			padding: 0.618em;
+			// border: 0;
 
 			a.remove {
 				float: none;
