@@ -42,20 +42,17 @@
 				@include span(6 of 12);
 			}
 
-			.site-search {
-				/* @include span(last 3 of 12);
-				clear: none; */
-				position: absolute; left: 10px; top: 10px; width: 90%; max-width: 240px;
-			}
+			.site-search { position: absolute; z-index: 9999; left: 10px; top: 10px; width: 90%; max-width: 240px; }
 
 			.main-navigation {
 				@include span(9 of 12);
 				clear: both;
 			}
 
-			.site-header-cart {
-				@include span(last 3 of 12);
-				margin-bottom: 0;
+			.site-header-cart { position: absolute; z-index: 9999; right: 10px; top: 10px; width: 90%; max-width: 240px;
+				.cart-contents { max-width: 100px; float: right;
+					.count { padding-right: 6px; }
+				}
 			}
 		}
 	}

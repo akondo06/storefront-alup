@@ -1727,7 +1727,7 @@ dl.variation {
 		position: relative;
 
 		.cart-contents {
-			padding: 2.244em 0;
+			//padding: 2.244em 0;
 			display: block;
 			position: relative;
 			background-color: transparent;
@@ -1743,9 +1743,7 @@ dl.variation {
 				font-weight: 400;
 			}
 
-			.amount {
-				margin-right: .327em;
-			}
+			.amount { display: none; margin-right: .327em; }
 
 			.count {
 				font-weight: 300;
@@ -1766,6 +1764,7 @@ dl.variation {
 			font-size: .857em;
 			left: -999em;
 			display: block;
+			background-color: #E7E7E7;
 
 			h2.widgettitle {
 				display: none;
