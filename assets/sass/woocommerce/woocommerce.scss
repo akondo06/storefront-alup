@@ -71,15 +71,15 @@
 	.widget_product_search {
 		input[type=text],
 		input[type=search] {
-			padding: 1.387em 1.618em;
+			padding: 0.587em 0.318em;
 			line-height: 1;
-			padding-left: 3.631em;
+			padding-left: 1.931em;
 		}
 
 		form {
 			&:before {
-				top: 1.387em;
-				left: 1.618em;
+				top: 0.687em;
+				left: 0.618em;
 			}
 		}
 
