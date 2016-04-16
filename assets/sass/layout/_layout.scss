@@ -38,17 +38,12 @@
 
 	.woocommerce-active {
 		.site-header {
-			.secondary-navigation {
-				@include span(6 of 12);
-			}
+			// .secondary-navigation { @include span(6 of 12); }
+			// .main-navigation { @include span(9 of 12); clear: both; }
 
 			.site-search { position: absolute; z-index: 9999; left: 10px; top: 10px; width: 90%; max-width: 240px; }
 
-			.main-navigation {
-				@include span(9 of 12);
-				clear: both;
-			}
-
+			.secondary-navigation { position: absolute; z-index: 9999; right: 80px; top: 10px; }
 			.site-header-cart { position: absolute; z-index: 9999; right: 10px; top: 10px; width: 90%; max-width: 240px;
 				.cart-contents { max-width: 100px; float: right;
 					.count { padding-right: 6px; }

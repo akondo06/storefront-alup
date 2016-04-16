@@ -10,7 +10,7 @@
  * be bumped and the readme will list any important changes.
  *
  * @see 	    http://docs.woothemes.com/document/template-structure/
- * @author 		WooThemes
+ * @author 		Akondo
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */

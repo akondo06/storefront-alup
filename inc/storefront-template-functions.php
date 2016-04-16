@@ -228,9 +228,7 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 		} else { ?>
 			<div class="site-branding">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
-					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-				<?php } ?>
+				<?php /*if ( '' != get_bloginfo( 'description' ) ) { ?> <p class="site-description"><?php echo bloginfo( 'description' ); ?></p> <?php }*/ ?>
 			</div>
 		<?php }
 	}

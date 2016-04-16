@@ -249,17 +249,18 @@ button.menu-toggle {
 	 * Secondary Navigation
 	 */
 	.secondary-navigation { margin: 0 0 1.618em; width: auto; clear: none; line-height: 1;
-		.menu { font-size: .857em; width: auto; float: right;
+		.menu { font-size: 12px; width: auto; float: right; letter-spacing: 0.05em; padding-bottom: 50px; // padding to hide the cart on hover..
 			> li:hover > a { text-decoration: none; }
 
 			> li > a { position: relative;
-				&:before { content: ""; display: block; width: 1px; height: 25%; background-color: rgba(#000,0.05); position: absolute; top: 37.5%; left: -3px; }
+				&:before { content: "|"; display: inline-block; padding-right: .857em; color: lighten( $color_body, 20% ); }
+				&:hover { text-decoration: underline; }
 			}
 
 			> li:first-child a:before { display: none; }
 
 			ul {
-				a { padding: .326em .857em; background: rgba(#000,0.05); }
+				a { padding: .75em .857em; background: rgba(#000,0.05); }
 
 				li:first-child a { padding-top: 1em; }
 
@@ -268,7 +269,7 @@ button.menu-toggle {
 				ul { margin-top: -.618em; }
 			}
 
-			a { padding: 1.387em .857em; font-weight: 300; color: lighten( $color_body, 20% );
+			a { padding: .75em .857em .75em 0; font-weight: 300; color: lighten( $color_body, 20% );
 				&:hover { text-decoration: none; }
 			}
 		}

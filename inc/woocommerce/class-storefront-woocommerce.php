@@ -136,7 +136,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since  1.0.0
 		 */
 		public function products_per_page() {
-			return intval( apply_filters( 'storefront_products_per_page', 12 ) );
+			return intval( apply_filters( 'storefront_products_per_page', 24 ) );
 		}
 
 		/**

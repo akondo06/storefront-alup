@@ -10,7 +10,7 @@
  * be bumped and the readme will list any important changes.
  *
  * @see 	    http://docs.woothemes.com/document/template-structure/
- * @author 		WooThemes
+ * @author 		Akondo
  * @package 	WooCommerce/Templates
  * @version     1.6.4
  */
@@ -41,9 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		/**
 		 * woocommerce_before_single_product_summary hook.
 		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
+		remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash' );
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
@@ -54,6 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				/**
 				 * woocommerce_single_product_summary hook.
 				 *
+		 		 * @hooked woocommerce_show_product_sale_flash - 2
 				 * @hooked woocommerce_template_single_title - 5
 				 * @hooked woocommerce_template_single_rating - 10
 				 * @hooked woocommerce_template_single_price - 10
@@ -62,6 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				 * @hooked woocommerce_template_single_meta - 40
 				 * @hooked woocommerce_template_single_sharing - 50
 				 */
+				add_action('woocommerce_single_product_summary', 'woocommerce_show_product_sale_flash', 2);
 				add_action('woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 60);
 				do_action( 'woocommerce_single_product_summary' );
 			?>
