@@ -48,14 +48,8 @@
 	}
 }
 
-.header-widget-region {
-	@include clearfix;
-
-	.widget {
-		margin: 0;
-		padding: 1em 0;
-		font-size: .857em;
-	}
+.header-widget-region { @include clearfix;
+	.widget { margin: 0; padding: 1em 0; font-size: .857em; }
 }
 
 .widget_search,
