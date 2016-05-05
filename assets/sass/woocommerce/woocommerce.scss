@@ -644,8 +644,14 @@ a.reset_variations {
 	}
 
 	ul.yith-wcan-label {
+		li { width: 50%;
+			a {  }
+		}
+	}
+
+	ul.yith-wcan-color {
 		li {
-			a { min-width: 60px; }
+			a { border-color: #fff; }
 		}
 	}
 }
@@ -680,8 +686,13 @@ a.reset_variations {
 		text-align: right;
 		line-height: 2.4em;
 
-		.button {
-			float: left;
+		.button { float: left; padding: .457em 0.687em; font-size: 14px; }
+		.price_label { float: right; font-size: 0; text-indent: -9999;
+			span { font-size: 14px; text-indent: initial;
+				&.from {
+					&:after { content: " — "; display: inline; }
+				}
+			}
 		}
 	}
 

@@ -201,11 +201,15 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	 * @since  1.0.0
 	 */
 	function storefront_header_widget_region() {
-		if ( is_active_sidebar( 'header-1' ) ) {
+		if ( is_active_sidebar( 'header-1' ) && ( is_product_category() || is_home() || is_shop() ) ) {
 		?>
-		<div class="header-widget-region" role="complementary">
-			<div class="col-full">
-				<?php dynamic_sidebar( 'header-1' ); ?>
+		<div class="header-widget-region-wrapper">
+			<a href="#" class="show-region">Filters</a>
+			<div class="header-widget-region" role="complementary">
+				<a href="#" class="hide-region">X</a>
+				<div class="col-full">
+					<?php dynamic_sidebar( 'header-1' ); ?>
+				</div>
 			</div>
 		</div>
 		<?php

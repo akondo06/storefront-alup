@@ -54,6 +54,18 @@
 		});
 	});
 
+	// Toggle the header widgets area
+	jQuery( window ).load( function() {
+		jQuery( '.header-widget-region-wrapper > a.show-region' ).click( function(e) {
+			jQuery( this ).parent().find('.header-widget-region').fadeIn('fast');
+			e.preventDefault();
+		});
+		jQuery( '.header-widget-region-wrapper .header-widget-region a.hide-region' ).click( function(e) {
+			jQuery( this ).closest('.header-widget-region').fadeOut('fast');
+			e.preventDefault();
+		});
+	});
+
 	// Add class to footer search when clicked
 	jQuery( window ).load( function() {
 		jQuery( '.storefront-handheld-footer-bar .search > a' ).click( function(e) {

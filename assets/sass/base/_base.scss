@@ -62,7 +62,14 @@ body {
 	}
 }
 
-.header-widget-region { position: absolute; z-index: 99; background-color: rgba(245, 245, 245, 0.7); width: 260px; }
+.header-widget-region-wrapper { position: relative;
+	a.show-region, a.hide-region { position: absolute; top: 0; right: 10px; display: inline-block; font-weight: 200; letter-spacing: .05em; }
+	a.show-region { padding: 8px 14px; font-size: 12px; }
+	.header-widget-region { display: none; position: absolute; top: 0; right: 0; z-index: 99; background-color: rgba(245, 245, 245, 0.8); width: 260px;
+		> .col-full { padding: 1em 1.518em 0; }
+		a.hide-region { font-size: 20px; }
+	}
+}
 
 .site-branding {
 	h1 {
